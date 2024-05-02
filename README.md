@@ -1,33 +1,39 @@
-# pdp-table
+[Демо](https://alarma1.github.io/DPD-table-demo/)  
+[Ссылка на проект](https://github.com/Alarma1/DPD-table)
+# Таблица данных с пагинацией и поиском
 
-This template should help get you started developing with Vue 3 in Vite.
+Необходимо на основании приложенного JSON-файла реализовать таблицу с данными, пагинацией и поиском.
 
-## Recommended IDE Setup
+## Структура таблицы
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+Таблица должна состоять из следующих колонок:
 
-## Type Support for `.vue` Imports in TS
+1. **Аватар:** Используется размер medium.
+2. **ФИО**
+3. **Пол**
+4. **Страна**
+5. **Дата рождения**
+6. **Адрес электронной почты**
+7. **Телефон**
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
+## Пагинация
 
-## Customize configuration
+Таблица должна иметь пагинацию с возможностью перехода между страницами списка. Каждая страница должна содержать не более 20 записей.
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+## Поиск
 
-## Project Setup
+Необходимо реализовать поле поиска, где пользователь может ввести ключевое слово. Результатом будет фильтрация таблицы по введенному значению.
 
-```sh
-npm install
-```
+## Ссылки и параметры URL
 
-### Compile and Hot-Reload for Development
+При фильтрации данных и изменении страницы должен автоматически формироваться URL с необходимыми query-параметрами. После перезагрузки страницы таблица должна быть открыта на соответствующей странице с предзаполненным значением для поиска.
 
-```sh
-npm run dev
-```
+## Дополнительные возможности
 
-### Type-Check, Compile and Minify for Production
+Дополнительно (не обязательно, но будет большим плюсом), реализовать сортировку по выбранной пользователем колонке с добавлением данных в результирующий URL.
 
-```sh
-npm run build
-```
+## Требования к реализации
+
+- Использование Vue.js + TypeScript.
+- Не использовать готовые библиотеки для реализации пагинации и создания таблиц.
+- Для стилизации допустимо использовать собственные стили. Верстка и оформление не являются обязательным требованием.
